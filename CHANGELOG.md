@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/kleinpetr/nuxt-nodemailer/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- UseRuntimeConfig import ([c3b60c1](https://github.com/kleinpetr/nuxt-nodemailer/commit/c3b60c1))
+
+### ❤️ Contributors
+
+- Klein Petr ([@kleinpetr](http://github.com/kleinpetr))
+
 ## v1.1.0
 
 
