@@ -21,6 +21,20 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "email",
+    "javascript",
+    "typescript",
+    "mail",
+    "nodemailer",
+    "npm-package",
+    "nuxt",
+    "nuxt-module",
+    "nuxt3",
+    "nuxt3-module",
+    "server",
+    "webdevelopment"
+  ],
   "scripts": {
     "prepack": "nuxt-module-build build",
     "dev": "nuxi dev playground",
