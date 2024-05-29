@@ -1,12 +1,11 @@
 # nuxt-nodemailer
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
+[![Nuxt][nuxt-src]][nuxt-href]
+[![Volta][volta-src]][volta-href]
 
-<a href="https://www.buymeacoffee.com/kleinpetr">
-      <img
-        src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg"
-        alt="Buy Me a Coffee"
-        width="114"
-      >
-</a>
+[![Buy me a coffee][buymecoffee-src]][buymeacoffee-href]
 
 > Adds nodemailer to the Nuxt3
 > 
@@ -22,6 +21,9 @@
 ## Install
 
 ```bash
+# Using ni
+ni -D nuxt-nodemailer nodemailer
+
 # Using pnpm
 pnpm add -D nuxt-nodemailer nodemailer
 
@@ -58,7 +60,7 @@ Add `nuxt-nodemailer` to the `modules` sections of your `nuxt.config.js`.
 ```
 
 ### Environment Variables
-It's recommended to use environment variables for sensitive information like `pass`.
+It's recommended to use environment variables for sensitive information like passwords.
 
 each option in the `nodemailer` configuration can be overwritten using environment variables. It has to be prefixed with `NUXT_NODEMAILER_` and in uppercase.
 
@@ -69,7 +71,7 @@ NUXT_NODEMAILER_AUTH_PASS=yourpassword
 NUXT_NODEMAILER_FROM="..."
 ```
 
-> Warning: You can overwrite only existing options in the `nodemailer` configuration.
+> Warning: You can overwrite only existing options in the `nodemailer` configuration in the `nuxt.config.js` file.
 
 
 ## Usage
@@ -79,7 +81,7 @@ In the server event handler, you can use the `useNodeMailer` composable to send 
 export default defineEventHandler(() => {
   const { sendMail } = useNodeMailer()
 
-  return sendMail({ subject: 'Nuxt + nodemailer', text: 'Hello from nuxt-nodemailer!', to: 'petr@kleinpetr.com' })
+  return sendMail({ subject: 'Nuxt + nodemailer', text: 'Hello from nuxt-nodemailer!', to: 'john@doe.com' })
 })
 ```
 > the benefit of using `sendMail` is that it automatically inherits the `from` argument from the configuration and you don't have to specify it every time.
@@ -97,3 +99,21 @@ export default defineEventHandler(() => {
   return transport.sendMail(...)
 })
 ```
+
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-nodemailer/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/nuxt-nodemailer
+
+[npm-downloads-src]: https://img.shields.io/npm/dt/nuxt-nodemailer.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/nuxt-nodemailer
+
+[license-src]: https://img.shields.io/npm/l/nuxt-nodemailer.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/nuxt-nodemailer
+
+[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
+[nuxt-href]: https://nuxt.com
+
+[volta-src]: https://user-images.githubusercontent.com/904724/209143798-32345f6c-3cf8-4e06-9659-f4ace4a6acde.svg
+[volta-href]: https://volta.net/kleinpetr/nuxt-nodemailer
+
+[buymecoffee-src]: https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png
+[buymeacoffee-href]: https://www.buymeacoffee.com/kleinpetr
