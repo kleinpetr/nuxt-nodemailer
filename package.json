@@ -46,9 +46,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.11.2"
-  },
-  "peerDependencies": {
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^7.0.5"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.3.2",
@@ -57,10 +55,9 @@
     "@nuxt/schema": "^3.11.2",
     "@nuxt/test-utils": "^3.13.1",
     "@types/node": "^20.12.12",
-    "@types/nodemailer": "^6.4.15",
+    "@types/nodemailer": "^6.4.17",
     "changelogen": "^0.5.5",
     "eslint": "^9.3.0",
-    "nodemailer": "^6.9.13",
     "nuxt": "^3.11.2",
     "typescript": "latest",
     "vue-tsc": "^2.0.19"
