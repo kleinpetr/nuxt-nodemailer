@@ -13,6 +13,12 @@ export default defineNuxtModule<SMTPTransport.Options>({
       ..._nuxt.options.runtimeConfig.nodemailer,
     }
 
+    _nuxt.hook('nitro:config', (config) => {
+      config.externals = config.externals || {}
+      config.externals.inline = config.externals.inline || []
+      config.externals.inline.push('nodemailer')
+    })
+
     const resolver = createResolver(import.meta.url)
     addServerImports([
       { from: resolver.resolve('./runtime/server/useNodeMailer'), name: 'useNodeMailer' },
