@@ -1,6 +1,5 @@
 import { defineNuxtModule, createResolver, addServerImports } from '@nuxt/kit'
 import type SMTPTransport from 'nodemailer/lib/smtp-transport'
-// import { defu } from 'defu'
 
 export default defineNuxtModule<SMTPTransport.Options>({
   meta: {

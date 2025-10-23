@@ -1,14 +1,23 @@
 export default defineNuxtConfig({
-  modules: ['../src/module'],
+  compatibilityDate: '2025-10-02',
   devtools: { enabled: true },
-  nodemailer: {
-    from: '"John Doe" <john@doe.com>',
-    host: 'smtp.mailtrap.io',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'john@doe.com',
-      pass: '',
-    },
+  modules: ['../src/module'],
+
+  features: {
+    devLogs: true  // show logs for server side routes
   },
+
+  nodemailer: {
+    host: process.env.NUXT_SMTP_HOST,
+    port: process.env.NUXT_SMTP_PORT as number | undefined,
+    auth: {
+      user: process.env.NUXT_SMTP_USERNAME,
+      pass: process.env.NUXT_SMTP_PASSWORD,
+    }
+  },
+
+  runtimeConfig: {
+    smtpSendTo: process.env.NUXT_SMTP_SEND_TO
+  }
+
 })

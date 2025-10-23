@@ -7,9 +7,9 @@
 
 [![Buy me a coffee][buymecoffee-src]][buymeacoffee-href]
 
-> Adds nodemailer to the Nuxt3
+> Adds nodemailer to the Nuxt 3 and 4
 > 
-> This module can be used to send emails only from the server-side in Nuxt3.
+> This module can be used to send emails only from the server-side in Nuxt 3 and 4.
 
 ## Features
 - Auto import server composable `useNodeMailer()`
