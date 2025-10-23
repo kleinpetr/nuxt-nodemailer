@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['../src/module'],
 
   features: {
-    devLogs: true  // show logs for server side routes
+    devLogs: true, // show logs for server side routes
   },
 
   nodemailer: {
@@ -13,11 +13,11 @@ export default defineNuxtConfig({
     auth: {
       user: process.env.NUXT_SMTP_USERNAME,
       pass: process.env.NUXT_SMTP_PASSWORD,
-    }
+    },
   },
 
   runtimeConfig: {
-    smtpSendTo: process.env.NUXT_SMTP_SEND_TO
-  }
+    smtpSendTo: process.env.NUXT_SMTP_SEND_TO,
+  },
 
 })

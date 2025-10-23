@@ -1,6 +1,6 @@
-import { useRuntimeConfig } from '#imports'
 import { createTransport } from 'nodemailer'
 import type SMTPTransport from 'nodemailer/lib/smtp-transport'
+import { useRuntimeConfig } from '#imports'
 
 export const useNodeMailer = () => {
   const { nodemailer } = useRuntimeConfig()
